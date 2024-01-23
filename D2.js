@@ -54,13 +54,34 @@ if (num5 === 8 || num6 === 8 || num5 + num6 === 8 || num5 - num6 === 8 || num6 -
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
+// let totalShoppingCart = 52;
+// let total;
+
+// if (totalShoppingCart > 50) {
+//   total = totalShoppingCart;
+//   console.log(total);
+// } else {
+//   total = totalShoppingCart + 10;
+//   console.log(total);
+// }
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart = 70;
+const discount = (totalShoppingCart / 100) * 20;
+const finalTotalShoppingCart = totalShoppingCart - discount;
+let total;
+
+if (finalTotalShoppingCart > 50) {
+  total = finalTotalShoppingCart;
+  console.log(total);
+} else {
+  total = finalTotalShoppingCart + 10;
+  console.log(total);
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -68,9 +89,23 @@ if (num5 === 8 || num6 === 8 || num5 + num6 === 8 || num5 - num6 === 8 || num6 -
   Alla fine mostra il risultato in console.
 */
 
-let num7 = 3;
+let num7 = 41;
 let num8 = 16;
 let num9 = 13;
+
+if (num7 < num8 && num7 < num9 && num8 < num9) {
+  console.log(num7, num8, num9);
+} else if (num7 < num8 && num7 < num9 && num9 < num8) {
+  console.log(num7, num9, num8);
+} else if (num8 < num7 && num8 < num9 && num7 < num9) {
+  console.log(num8, num7, num9);
+} else if (num8 < num7 && num8 < num9 && num9 < num7) {
+  console.log(num8, num9, num7);
+} else if (num9 < num7 && num9 < num8 && num7 < num8) {
+  console.log(num9, num7, num8);
+} else {
+  console.log(num9, num8, num7);
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
